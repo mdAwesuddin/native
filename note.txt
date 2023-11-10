@@ -1,0 +1,40 @@
+import * as React from "react";
+import { SearchBar } from "@rneui/base";
+
+export default () => {
+  const [value, setValue] = React.useState("");
+  return (
+    <SearchBar
+      platform="default"
+      containerStyle={{
+        borderWidth: 1,
+        borderColor: "black",
+        borderRadius: 5,
+        padding: 0,
+        backgroundColor: "white"
+      }}
+      inputContainerStyle={{
+        padding: 0,
+        backgroundColor: "white"
+      }}
+      inputStyle={{
+        color: "black",
+        padding: 0,
+        backgroundColor: "white"
+      }}
+      leftIconContainerStyle={{}}
+      rightIconContainerStyle={{}}
+      loadingProps={{}}
+      onChangeText={newVal => setValue(newVal)}
+      onClearText={() => console.log(onClearText())}
+      placeholder="Type query here..."
+      placeholderTextColor="black"
+      round
+      showCancel
+      cancelButtonTitle="Cancel"
+      cancelButtonProps={{}}
+      onCancel={() => console.log(onCancel())}
+      value={value}
+    />
+  );
+}
